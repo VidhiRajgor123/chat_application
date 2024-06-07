@@ -1,0 +1,5 @@
+<%= form_with url: messages_path, id: "message_form", remote: true do |f| %>
+  <%= f.text_field :content, placeholder: "Type your message...", id: "message_content" %>
+  <%= f.hidden_field :user_id, value: current_user.id, id: "message_user_id" %>
+  <%= f.submit "Send" %>
+<% end %>
